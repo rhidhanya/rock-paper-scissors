@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="card-container">
+      <div class="card" id="flip-card">
+        <div class="card-face card-front">
+          <div class="game-container">
+            <div class="game-header">
+              <h1>Let's Play!</h1>
+              <button id="replay-btn" class="replay">
+                <i class="fas fa-redo-alt"></i>
+              </button>
+            </div>
+            <div class="result-box" id="result-box"></div>
+            <p id="result-text"></p>
+            <div class="buttons">
+              <div class="move">
+                <button data-move="rock">
+                  <i class="far fa-hand-rock"></i>
+                </button>
+                <span class="label">Rock</span>
+              </div>
+              <div class="move">
+                <button data-move="paper">
+                  <i class="far fa-hand-paper"></i>
+                </button>
+                <span class="label">Paper</span>
+              </div>
+              <div class="move">
+                <button data-move="scissors">
+                  <i class="far fa-hand-scissors"></i>
+                </button>
+                <span class="label">Scissors</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-face card-back">
+          <div class="game-container">
+            <div class="dashboard">
+              <h2>Game Summary</h2>
+              <p id="win-count">Wins: 0</p>
+              <p id="loss-count">Losses: 0</p>
+              <p id="draw-count"></p>
+              <button id="play-again-btn">↻ Play Again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
